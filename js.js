@@ -1,21 +1,27 @@
 let num = prompt("enter number");
 
-for(let i = 0;i < num;i++){
-        for(let j = 0; j < num; j++){
-                const container = document.querySelector('.container');
-
-                const content = document.createElement('div');
-        
-                content.classList.add('square');
-                content.style.background = "yellow";
-                container.appendChild(content);
+const container = document.querySelector('.container');
+for (var i = 0; i < num; ++i) {
+        var column = document.createElement('div'); // create column
+        column.classList.add("column");
+        for (var j = 0; j < num; ++j) {
+            var row = document.createElement('div'); // create row
+            row.classList.add("square");
+            
+            row.style.background = "yellow";
+            column.appendChild(row); // append row in column
         }
-        
-        const c = document.querySelector('.container');
+        container.appendChild(column); // append column inside container
+    }
+document.body.appendChild(container);
 
-        const co = document.createElement('hr');
-        
-        c.appendChild(co);
+function mouseDown(e) {
+        e.innerHTML = "The mouse button is held down.";
+}
 
-
+var messages = document.querySelectorAll(".square");
+for (var i = 0; i < messages.length; i++) {
+        messages[i].addEventListener("click", function(e){
+                messages[i].style.background = "black";
+        });
 }
