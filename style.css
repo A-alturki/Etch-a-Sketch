@@ -1,3 +1,10 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D4F1F4;
+}
+
 .main{
     display:flex;
     align-items: center;
@@ -21,7 +28,6 @@ max-height: 960px !important;
     flex:1;
     flex-direction: column;
     border: 1px black dotted;  
-    background-color: blue;
 
 }
 
@@ -35,7 +41,24 @@ max-height: 960px !important;
     color:#05445E;
     font-size: 92px;
     font-family: 'VT323', monospace;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    
+}
 
+.big-boy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.left{
+    display:flex;
+    justify-content: center;
+    margin-right: 5em;
+    margin-left: -5em;
+    margin-top: 1em;
 }
 
 
