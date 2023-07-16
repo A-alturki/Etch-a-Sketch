@@ -1,4 +1,12 @@
-.container{
+.main{
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+}
+
+
+.container{ 
 display:flex;
 flex-wrap: wrap;
 flex-direction: column;
@@ -22,3 +30,12 @@ max-height: 960px !important;
     flex-direction: row;
     flex:1;
 }
+
+.header{
+    color:#05445E;
+    font-size: 92px;
+    font-family: 'VT323', monospace;
+
+}
+
+

@@ -21,7 +21,10 @@ function mouseDown(e) {
 
 var messages = document.querySelectorAll(".square");
 for (var i = 0; i < messages.length; i++) {
-        messages[i].addEventListener("click", function(e){
-                messages[i].style.background = "black";
+        messages[i].addEventListener("mousedown" && "mouseover", e=> {
+                console.log(e.target);
+                e.target.style.background = 'red';
+                
+                
         });
 }
