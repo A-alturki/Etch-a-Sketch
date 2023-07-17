@@ -1,11 +1,23 @@
-let num = prompt("enter number");
 
-const container = document.querySelector('.container');
-const main = document.querySelector('.main');
-for (var i = 0; i < num; ++i) {
+const slider = document.querySelector('.slider');
+slider.addEventListener("input", function(){
+        const container = document.querySelector('.container');
+        console.log(slider.value);
+        container.textContent = '';
+        container.remove();
+        gridMaker(slider.value);
+})
+let num = slider.value;
+
+function gridMaker(silderValue){
+        const container = document.createElement('div');
+        container.classList.add("container");
+        const main = document.querySelector('.main');
+
+for (var i = 0; i < silderValue; ++i) {
         var column = document.createElement('div'); // create column
         column.classList.add("column");
-        for (var j = 0; j < num; ++j) {
+        for (var j = 0; j < silderValue; ++j) {
             var row = document.createElement('div'); // create row
             row.classList.add("square");
             
@@ -27,3 +39,7 @@ for (var i = 0; i < messages.length; i++) {
                 
         });
 }
+
+}
+
+gridMaker(slider.value);
