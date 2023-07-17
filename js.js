@@ -7,7 +7,7 @@ slider.addEventListener("input", function(){
         container.remove();
         gridMaker(slider.value);
 })
-let num = slider.value;
+
 
 function gridMaker(silderValue){
         const container = document.createElement('div');
@@ -39,6 +39,9 @@ for (var i = 0; i < messages.length; i++) {
                 
         });
 }
+
+let sliderText = document.querySelector(".slider-text");
+sliderText.textContent = slider.value + "x" + slider.value;
 
 }
 

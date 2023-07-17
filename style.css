@@ -28,7 +28,6 @@ max-height: 960px !important;
     flex:1;
     flex-direction: column;
     border: 1px black dotted;  
-
 }
 
 .column{
@@ -61,9 +60,10 @@ max-height: 960px !important;
     margin-top: 1em;
 }
 
-.container-text{
+.slider-text{
     display:flex;
     justify-content: center;
-    color:blue;
-    
+    color:#05445E;
+    font-family: 'VT323', monospace;
+    font-size: 32px;
 }
