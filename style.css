@@ -67,3 +67,29 @@ max-height: 960px !important;
     font-family: 'VT323', monospace;
     font-size: 32px;
 }
+
+.button {
+    margin-top: 1em;
+    --x: 50%;
+    --y: 50%;
+    display:flex;
+    justify-content: center ;
+    padding: 1em 2em;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 100px;
+    border: 3px solid transparent;
+}
+
+.blue{
+    background: linear-gradient(#41729F, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00c9a7, #845ec2) border-box;
+}
+
+.cyan{
+    background: linear-gradient(#47b8b3, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00c9a7, #845ec2) border-box;
+}
+
+.purple{
+    background: linear-gradient(#474cb8, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00c9a7, #845ec2) border-box;
+}
