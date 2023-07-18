@@ -60,12 +60,21 @@ max-height: 960px !important;
     margin-top: 1em;
 }
 
-.slider-text{
+.slider-text {
     display:flex;
     justify-content: center;
     color:#05445E;
     font-family: 'VT323', monospace;
     font-size: 32px;
+}
+.slider-thing{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex:1;
+    margin-top: 4px;
+    margin-bottom: 16px;
 }
 
 .button {
@@ -82,6 +91,22 @@ max-height: 960px !important;
     border: 3px solid transparent;
 }
 
+.main-colors{
+    display:flex;
+    flex-direction: row;
+    gap:12px;
+}
+
+.main-colors .button{
+    max-width: 110px;
+    min-width: 110px;
+}
+
+.low-boys .button{
+    max-width: 110px;
+    min-width: 110px;
+}
+
 .blue{
     background: linear-gradient(#41729F, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00c9a7, #845ec2) border-box;
 }
@@ -96,4 +121,24 @@ max-height: 960px !important;
 
 .rainbow-blue{
     background: linear-gradient(#622ed1, #29a6d6) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00c9a7, #845ec2) border-box;
+}
+.rainbow{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.reset{
+    background: linear-gradient(#ef1023, black) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #10efdc, #ef1023) border-box;
+}
+
+.eraser{
+    background: linear-gradient(white, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), white, black) border-box;
+}
+
+.low-boys{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    gap:16px;
 }

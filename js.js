@@ -25,11 +25,22 @@ sliderText.textContent = slider.value + "x" + slider.value;
 
 }
 
+function gridRemover(){
+        const container = document.querySelector('.container');
+        container.textContent = '';
+        container.remove();
+}
+
 function colorSelector(color){
         var messages = document.querySelectorAll(".square");
         for (var i = 0; i < messages.length; i++) {
         messages[i].addEventListener("mouseover", e=> {
-                
+                if(flag){
+                        e.target.style.background = color;
+                }
+        });
+
+        messages[i].addEventListener("mousedown", e=> {
                 e.target.style.background = color;
                 
         });
@@ -40,9 +51,7 @@ function colorSelector(color){
 
 const slider = document.querySelector('.slider');
 slider.addEventListener("input", function(){
-        const container = document.querySelector('.container');
-        container.textContent = '';
-        container.remove();
+        gridRemover();
         gridMaker(slider.value);
 })
 
@@ -87,16 +96,56 @@ purple.addEventListener("click", function(){
 
 let rainbow = document.querySelector(".rainbow-blue");
 rainbow.addEventListener("click", function(){
-        console.log("clicked");
         var messages = document.querySelectorAll(".square");
         for (var i = 0; i < messages.length; i++) {
         messages[i].addEventListener("mouseover", e=> {
                 let b = Math.floor(Math.random() * 50) + 200;
-                let r = Math.floor(Math.random() * 60) + 140;
-                let g = Math.floor(Math.random() * 60) + 140;
+                let r = Math.floor(Math.random() * 60) + 100;
+                let g = Math.floor(Math.random() * 60) + 100;
                 let color = "#" + r.toString(16) + g.toString(16) + b.toString(16);
+                if(flag){
+                        e.target.style.background = color;
+                }
+                
+                
+        });
+
+        messages[i].addEventListener("mousedown", e=> {
+                let b = Math.floor(Math.random() * 50) + 200;
+                let r = Math.floor(Math.random() * 60) + 100;
+                let g = Math.floor(Math.random() * 60) + 100;
+                let color = "#" + r.toString(16) + g.toString(16) + b.toString(16);
+                
                 e.target.style.background = color;
+                
+                
                 
         });
 }
+})
+
+let reset = document.querySelector(".reset");
+reset.addEventListener("click", function(){
+        gridRemover();
+        gridMaker(slider.value);
+})
+
+
+
+let eraser = document.querySelector(".eraser");
+eraser.addEventListener("click", function(){
+        color = "#ffffff";
+        
+        colorSelector(color);
+})
+
+let flag = false;
+
+let body = document.querySelector("body");
+body.addEventListener("mousedown", function(){
+        flag = true;
+})
+
+body.addEventListener("mouseup", function(){
+        flag = false;
 })

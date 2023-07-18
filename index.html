@@ -12,17 +12,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap" rel="stylesheet">
 </head>
-<body>
+<body ondragstart="return false;" ondrop="return false;">
+    
     <div class="big-boy">
 
     <div class="left">
         <div class="slidecontainer">
             <div class="slider-text"></div>
-            <input type="range" min="1" max="75" value="25" class="slider" id="myRange">
-            <button class="button blue">Blue</button>
-            <button class="button cyan">Cyan</button>
-            <button class="button purple">Purple</button>
-            <button class="button rainbow-blue">Rainbow Blue</button>
+            <div class="slider-thing">
+                <input type="range" min="1" max="75" value="25" class="slider" id="myRange">
+            </div>
+            <div class="main-colors">
+                <button class="button blue">Blue</button>
+                <button class="button cyan">Cyan</button>
+                <button class="button purple">Purple</button>
+            </div>
+            <div class="rainbow">
+                <button class="button rainbow-blue">Rainbow Blue</button>
+            </div>
+            
+            <div class="low-boys">
+                <button class="button reset"> Reset</button>
+                <button class="button eraser">Eraser</button>
+            </div>
+            
         </div>
         
     </div>
