@@ -41,7 +41,6 @@ function colorSelector(color){
 const slider = document.querySelector('.slider');
 slider.addEventListener("input", function(){
         const container = document.querySelector('.container');
-        console.log(slider.value);
         container.textContent = '';
         container.remove();
         gridMaker(slider.value);
@@ -84,4 +83,20 @@ purple.addEventListener("click", function(){
         color = "#474cb8";
         
         colorSelector(color);
+})
+
+let rainbow = document.querySelector(".rainbow-blue");
+rainbow.addEventListener("click", function(){
+        console.log("clicked");
+        var messages = document.querySelectorAll(".square");
+        for (var i = 0; i < messages.length; i++) {
+        messages[i].addEventListener("mouseover", e=> {
+                let b = Math.floor(Math.random() * 50) + 200;
+                let r = Math.floor(Math.random() * 60) + 140;
+                let g = Math.floor(Math.random() * 60) + 140;
+                let color = "#" + r.toString(16) + g.toString(16) + b.toString(16);
+                e.target.style.background = color;
+                
+        });
+}
 })

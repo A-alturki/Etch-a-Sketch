@@ -93,3 +93,7 @@ max-height: 960px !important;
 .purple{
     background: linear-gradient(#474cb8, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00c9a7, #845ec2) border-box;
 }
+
+.rainbow-blue{
+    background: linear-gradient(#622ed1, #29a6d6) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00c9a7, #845ec2) border-box;
+}
