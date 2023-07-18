@@ -31,7 +31,6 @@ function colorSelector(color){
         messages[i].addEventListener("mouseover", e=> {
                 
                 e.target.style.background = color;
-                console.log(color);
                 
         });
 }
@@ -52,35 +51,37 @@ slider.addEventListener("input", function(){
 gridMaker(slider.value);
 
 
-document.querySelector('.button').onmousemove = (e) => {
+let buttons = document.querySelectorAll(".button");
+for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("mousemove", function(e){
+                const x = e.pageX - e.target.offsetLeft
+	        const y = e.pageY - e.target.offsetTop
 
-	const x = e.pageX - e.target.offsetLeft
-	const y = e.pageY - e.target.offsetTop
-
-	e.target.style.setProperty('--x', `${ x }px`)
-	e.target.style.setProperty('--y', `${ y }px`)
-	
+	        e.target.style.setProperty('--x', `${ x }px`)
+	        e.target.style.setProperty('--y', `${ y }px`)
+        }) 
 }
 
-
+color = "#41729F";
+colorSelector(color);
 
 let blue = document.querySelector(".blue");
 blue.addEventListener("click", function(){
         color = "#41729F";
-        console.log("blue!");
+
         colorSelector(color);
 })
 
 let cyan = document.querySelector(".cyan");
 cyan.addEventListener("click", function(){
         color = "#47b8b3";
-        console.log("cyan!");
+
         colorSelector(color);
 })
 
 let purple = document.querySelector(".purple");
 purple.addEventListener("click", function(){
         color = "#474cb8";
-        console.log("purple!");
+        
         colorSelector(color);
 })
